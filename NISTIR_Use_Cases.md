@@ -12,11 +12,11 @@ The use cases are:
 3. Law Enforcement Access to Intelligence Database  
 
 
-### 4.1. Federated Access to Classified Document in an Information Sharing Environment
+### 4.1. Federated Access to Classified Documents in an Information Sharing Environment
 
 #### Overview
 
-Monique, an Army employee with a current Secret clearance, attempts to access an information system that stores classified information, hosted on a shared Secure Internet Protocol Router Network (SIPRNet) site by the Air Force. Furthermore, the system, due to its sensitivity and the number of possible individuals that have legitimate need to access it, is protected using Attribute Based Access Control (ABAC) principles. ABAC evaluates access policy to enforce decisions based on attributes specific to the user and the resource (not addressed in the schema). 
+Monique, an Army employee with a current Secret clearance, attempts to access an information system that stores classified information, hosted by the Air force on a shared Secure Internet Protocol Router Network (SIPRNet) site. Furthermore, the system, due to its sensitivity and the number of possible individuals that have legitimate need to access it, is protected using Attribute Based Access Control (ABAC) principles. ABAC evaluates access policy to enforce decisions based on attributes specific to the user and the resource (not addressed in the schema). 
 
 When Monique attempts access to the resource, an attribute query is routed to her agency, the Army, to obtain the attributes needed to grant or deny access. The Army then asserts the requested set of attributes, which are evaluated against the access control policy of the Air Force hosted site so a decision can be made. 
 
@@ -42,7 +42,7 @@ Through the establishment of AVM, these further considerations and requirements 
 
 #### Privacy Considerations
 
-In this scenario privacy considerations factoring into the selection of AVM are limited, the selected information is an absolute for access based on national security requirements and only the requested value and metadata are being returned to a trusted party as part of the assertion.
+In this scenario considering privacy related AVM is limited. The selected attributes are an absolute for access based on national security needs and only the requested value and metadata are being returned to a trusted party as part of the assertion.
 
 #### Suggested Attribute Value Metadata
 
@@ -58,7 +58,7 @@ Based on the scenario’s authorization and privacy considerations, the table be
 
 #### XACML Example Policy
 
-Attribute and metadata names, and valid values, are fictional.  These will ultimately depend on the technologies of the attribute sources that is being queried to evaluate policy.  URI's and namespaces, in some cases, have been removed for brevity.
+The following attribute and metadata names, and valid values, are fictional.  These will ultimately depend on the technologies of the attribute sources that are being queried to evaluate policy.  URI's and namespaces, in some cases, have been removed for brevity.
 
 
 ~~~xml
@@ -181,7 +181,7 @@ When Jane initiates the registration process she is notified by her IDP which at
 
 #### Authorization Considerations
 
-For this transaction, the VA has identified the attribute *Veteran Status* as critical to making an initial authorization decision. Though the VA is likely to have an existing record for Jane, it may not be easily accessible to the application. To ease the process of online enrollment for the service the VA has determined and external assertion of veteran status is sufficient to open an account if the following policy is met:
+For this transaction, the VA has identified the attribute *Veteran Status* as critical to making an initial authorization decision. Though the VA is likely to have an existing record for Jane, it may not be easily accessible to the application. To ease the process of online enrollment for the service, the VA has determined and external assertion of veteran status is sufficient to open an account if the following policy is met:
 
 |**Authorization Policy**|
 |-------------------------------|
@@ -190,11 +190,11 @@ For this transaction, the VA has identified the attribute *Veteran Status* as cr
 
 #### Privacy Considerations
 
-In this use case, some metadata elements with privacy implications, such as `provider`, are necessary for the transaction. Since this must be included, it’s important to ensure that Jane is aware of the fact that her information is being transferred as metadata in transactions. By gaining explicit consent from Jane before releasing her veteran status (as required by the authorization policy), Jane is notified of the transfer of this attribute value, and she gives her permission for the transfer. Other metadata elements with privacy implications, such as `origin`, are not needed in this transaction, technically or policy-wise. Thus, they should be excluded since they are not necessary and their inclusion would potentially reveal a broad profile of Jane (e.g., related to her associations with certain organizations).
+In this use case, some metadata elements with privacy implications, such as `provider`, are necessary for the transaction. Since this must be included, it’s important to ensure that Jane is aware that her information is being transferred as metadata in transactions. By gaining explicit consent from Jane before releasing her veteran status (as required by the authorization policy), Jane is notified of the transfer of this attribute value, and she gives her permission for the transfer. Other metadata elements with privacy implications, such as `origin`, are not needed in this transaction, technically or policy-wise. Thus, they should be excluded since they are not necessary and their inclusion would potentially reveal a broad profile of Jane (e.g., related to her associations with certain organizations).
 
 #### Suggested Attribute Value Metadata
 
-Based on the scenario’s authorization and privacy considerations, the table below illustrates the AVM that is applied to support appropriate decisions by the VA system. It also provides notional values.
+In this scenario, considering privacy related AVM is limited. Based on the scenario’s authorization and privacy considerations, the table below illustrates the AVM that is applied to support appropriate decisions by the VA system. It also provides notional values.
 
 |**Element**  |**Value** |
 |------|------|
@@ -203,7 +203,7 @@ Based on the scenario’s authorization and privacy considerations, the table be
 
 #### XACML Example Policy
 
-Attribute and metadata names, and valid values, are fictional.  These will ultimately depend on the technologies of the attribute sources that is being queried to evaluate policy.  URI's and namespaces, in some cases, have been removed for brevity.
+The following attribute and metadata names, and valid values, are fictional.  These will ultimately depend on the technologies of the attribute sources that is being queried to evaluate policy.  URI's and namespaces, in some cases, have been removed for brevity.
 
 
 ~~~xml
@@ -249,7 +249,7 @@ Attribute and metadata names, and valid values, are fictional.  These will ultim
 
 #### Overview
 
-Claude is with the Los Angeles Police Department (LAPD) and is attempting to access an FBI criminal justice database in order to gather additional information for a high-profile case. This database uses a federated identity model with multiple IDPs across affiliated law enforcement agencies. Due to the sensitive information retained within the database, access is protected based by ABAC. The attributes are asserted by the appropriate law enforcement agency (in this case the LAPD) to the FBI, who is then able to evaluate the attributes and make an access decision.
+Claude is with the Los Angeles Police Department (LAPD) and is attempting to access an FBI criminal justice database to gather additional information for a high-profile case. This database uses a federated identity model with multiple IDPs across affiliated law enforcement agencies. Due to the sensitive information retained within the database, access is protected based on ABAC. The attributes are asserted by the appropriate law enforcement agency (in this case the LAPD) to the FBI, who is then able to evaluate the attributes and make an access decision.
 
 |**Attribute**                  |**Value**       |
 |---------------------------------------|----------------------|
@@ -258,7 +258,7 @@ Claude is with the Los Angeles Police Department (LAPD) and is attempting to acc
 
 #### Authorization Considerations
 
-We assume in this example that the access request was sent on 7/1/16. The FBI allows access to this database based around two major requirements. The first requirement is that Claude must be a Sworn Law Enforcement Officer (LEO), verified at least quarterly in order to prevent granting access to retired users. The second requirement is that the Claude must have completed Criminal Justice Information System (CJIS) Privacy Training. Verification of the completion of this training must be done within 12 months.
+We assume in this example that the access request was sent on 7/1/16. The FBI allows access to this database based on two major requirements. The first requirement is that Claude must be a Sworn Law Enforcement Officer (LEO), verified at least quarterly to prevent granting access to retired users. The second requirement is that Claude must have completed Criminal Justice Information System (CJIS) Privacy Training. This training must have been completed - and verified - within the last 12 months. 
 
 |**Authorization Policy**|
 |-------------------------------|
@@ -276,17 +276,17 @@ Based on the scenario’s authorization and privacy considerations, the table be
 
 |**Element**  |**Value** |
 |------|------|
-| **Verifier** | **Origin** - The statuses and verification dates for both Sworn LEO and CJIS Privacy Training would be verified by the originating entity (LAPD) |  
+| **Verifier** | **Origin** - The status and verification dates for both Sworn LEO and CJIS Privacy Training would be verified by the originating entity (LAPD) |  
 | **Last Verification (Sworn LEO)** |	**6/15/16** |
 | **Last Verification (CJIS Privacy Training)** |	**6/1/15** |
-| **Origin (both)** | **Los Angeles Police Department** |
-|**Pedigree (both)**| **Authoritative** - The attribute’s value was generated and in this case asserted as well by the authoritative source|
+| **Origin** | **Los Angeles Police Department** |
+|**Pedigree**| **Authoritative** - The attribute’s value was generated and in this case asserted as well by the authoritative source|
 
 Based on information about the user sent to the FBI by the LAPD IDP, the user is a Sworn LEO and has been verified as such within the last month (6/15/16). The user has also completed CJIS Privacy Training. However, the last verified date for the CJIS Privacy Training value was 13 months ago (6/1/15). In accordance with policy and based on interrogation of AVM, Claude is denied access based on the amount of time since the value for CJIS Privacy Training was verified. Here, the FBI has maintained its policy that simply taking the CJIS Privacy Training is not enough; it must have also been completed and verified within the last year as well. Similar to the “Federated Access to Classified Document in an Information Sharing Environment” example, the inclusion of AVM allows for more informed and fine grained access control decisions than in a traditional ABAC instance.
 
 #### XACML Example Policy
 
-Attribute and metadata names, and valid values, are fictional.  These will ultimately depend on the technologies of the attribute sources that is being queried to evaluate policy.  URI's and namespaces, in some cases, have been removed for brevity.
+The following attribute and metadata names, and valid values, are fictional.  These will ultimately depend on the technologies of the attribute sources that is being queried to evaluate policy.  URI's and namespaces, in some cases, have been removed for brevity.
 
 
 ~~~xml

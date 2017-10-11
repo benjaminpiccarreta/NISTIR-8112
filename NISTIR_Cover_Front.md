@@ -134,7 +134,7 @@ This NIST Internal Report proposes attribute schema metadata and attribute value
 
 This document defines a set of optional elements to support cross-organization confidence in attribute assertions as well as the semantics and syntax required to support interoperability. The schema contains two core components, `attribute schema metadata` and `attribute value metadata` which, along with their suggested elements, are described below:
 
-* **Attribute Schema Metadata (ASM)** - Metadata for the attribute itself, not the specific attribute’s value. For example, this metadata may describe the `format` in which the attribute will be transmitted, such as that height will always be sent in inches regardless of what the actual value may be (e.g., `height= 72`). This schema provides a set of attribute metadata from which to choose when constructing and executing an attribute sharing agreement (often called trust-time) and the rationale for their inclusion.
+* **Attribute Schema Metadata (ASM)** - Metadata for the attribute itself, not the specific attribute’s value. For example, this metadata may describe the `format` in which the attribute will be transmitted, such as that height will always be sent in inches regardless of what the actual value may be (e.g., `height= 72`). This schema in Table 1 provides a set of attribute metadata from which to choose when constructing and executing an attribute sharing agreement (often called trust-time) for their inclusion.
 
 | Metadata            | Description                                                                          | Recommended Values                                        |
 | ------------------- |------------------------------------------------------------------------------------|---------------------------------------------|
@@ -144,7 +144,7 @@ This document defines a set of optional elements to support cross-organization c
 | **Verification Frequency** |The frequency at which the Attribute Provider will re-verify the attribute| Any |
 | **Data Processing** | Describes the basis for processing attributes and attribute values | Any |
 
-* **Attribute Value Metadata (AVM)** - These elements focus on the asserted value for the attribute. Following the same example as above, the attribute value would be the actual height. A possible AVM for the height could be the name of the originating organization that provisioned the height, for example the DMV in the subject's home state. This schema provides a set of AVM, proposed values for those metadata fields, and rationale for their inclusion.
+* **Attribute Value Metadata (AVM)** - These elements focus on the asserted value for the attribute. Following the same example as above, the attribute value would be the actual height. A possible AVM for the height could be the name of the originating organization that provisioned the height, for example the DMV in the subject's home state. This schema in Table 2 provides a set of AVM, proposed values for those metadata fields, and rationale for their inclusion.
 
 
 
@@ -157,7 +157,7 @@ This document defines a set of optional elements to support cross-organization c
 **Verification Method** |The method by which the attribute value was verified as true and belonging to the specific individual| -"Document Verification" <br> -"Record Verification" <br> -"Document Verification with Record Verification" <br> -"Proof of Possession" <br> -"Probabilistic Verification" <br> -"Not Verified"
 **Last Verification** |The date and time when the attribute value was last verified as being true and belonging to the specified individual|No restrictions
 **Last Refresh** |The date and time when the attribute was last refreshed |No restrictions
-**Expiration Date** |The date an attribute’s value is considered to be no longer valid|No restrictions
+**Expiration Date** |The date an attribute’s value is no longer valid|No restrictions
 **Date Consented** | The date on which subject consent for release of the attribute value was acquired | No restrictions
 **Consent Type** | Indicates the type of consent | No restrictions
 **Acceptable Uses** |Allowed use conditions for entities that receive attributes| No restrictions
