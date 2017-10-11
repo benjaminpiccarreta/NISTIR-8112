@@ -194,7 +194,7 @@ In this use case, some metadata elements with privacy implications, such as `pro
 
 #### Suggested Attribute Value Metadata
 
-In this scenario, considering privacy related AVM is limited. Based on the scenario’s authorization and privacy considerations, the table below illustrates the AVM that is applied to support appropriate decisions by the VA system. It also provides notional values.
+Based on the scenario’s authorization and privacy considerations, the table below illustrates the AVM that is applied to support appropriate decisions by the VA system. It also provides notional values.
 
 |**Element**  |**Value** |
 |------|------|
@@ -203,7 +203,7 @@ In this scenario, considering privacy related AVM is limited. Based on the scena
 
 #### XACML Example Policy
 
-The following attribute and metadata names, and valid values, are fictional.  These will ultimately depend on the technologies of the attribute sources that is being queried to evaluate policy.  URI's and namespaces, in some cases, have been removed for brevity.
+The following attribute and metadata names, and valid values, are fictional.  These will ultimately depend on the technologies of the attribute sources that are being queried to evaluate policy.  URI's and namespaces, in some cases, have been removed for brevity.
 
 
 ~~~xml
@@ -286,7 +286,7 @@ Based on information about the user sent to the FBI by the LAPD IDP, the user is
 
 #### XACML Example Policy
 
-The following attribute and metadata names, and valid values, are fictional.  These will ultimately depend on the technologies of the attribute sources that is being queried to evaluate policy.  URI's and namespaces, in some cases, have been removed for brevity.
+The following attribute and metadata names, and valid values, are fictional.  These will ultimately depend on the technologies of the attribute sources that are being queried to evaluate policy.  URI's and namespaces, in some cases, have been removed for brevity.
 
 
 ~~~xml
