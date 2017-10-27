@@ -8,15 +8,15 @@ A statement from an attribute provider to a relying party that contains identity
 
 #### Attribute  
 
-A claim of a named quality or characteristic inherent in or ascribed to someone or something.
+A reference of a named quality or characteristic inherent in or ascribed to someone or something.
 
 #### Attribute Based Access Control (ABAC)
 
 Access control based on attributes associated with subjects, objects, targets, initiators, resources, or the environment. An access control rule set defines the combination of attributes under which access may take place.
 
-#### Attribute Claim (or "Claim")
+#### Attribute Reference (or “Reference”)
 
-A statement asserting a property of a subject without necessarily containing authentication or other identity information, independent of format. For example, for the attribute 'birthday', a claim could be 'older than 18' or 'born in December'.
+A statement asserting a property of a subject without necessarily containing authentication or other identity information, independent of format. For example, for the reference 'birthday', a claim could be 'older than 18' or 'born in December'.
 
 #### Attribute Provider (AP)
 

@@ -42,7 +42,7 @@ Through the establishment of AVM, these further considerations and requirements 
 
 #### Privacy Considerations
 
-In this scenario considering privacy related AVM is limited. The selected attributes are an absolute for access based on national security needs and only the requested value and metadata are being returned to a trusted party as part of the assertion.
+In this scenario, the privacy risks are limited. Although the selected attributes are an absolute requirement for access based on national security needs, the requested value and metadata are minimal, and are being returned to a trusted party as part of the assertion in the context of the subject’s employment duties.
 
 #### Suggested Attribute Value Metadata
 
@@ -190,7 +190,7 @@ For this transaction, the VA has identified the attribute *Veteran Status* as cr
 
 #### Privacy Considerations
 
-In this use case, some metadata elements with privacy implications, such as `provider`, are necessary for the transaction. Since this must be included, it’s important to ensure that Jane is aware that her information is being transferred as metadata in transactions. By gaining explicit consent from Jane before releasing her veteran status (as required by the authorization policy), Jane is notified of the transfer of this attribute value, and she gives her permission for the transfer. Other metadata elements with privacy implications, such as `origin`, are not needed in this transaction, technically or policy-wise. Thus, they should be excluded since they are not necessary and their inclusion would potentially reveal a broad profile of Jane (e.g., related to her associations with certain organizations).
+In this use case, some metadata elements with privacy implications, such as `provider`, are necessary for the transaction. Adding additional controls to maintain predictability, manageability, and disassociability commensurate with identified privacy risks can better manage these privacy concerns. For example, since ‘provider’ must be included, obtaining  explicit consent from Jane before releasing her veteran status (as required by the authorization policy), enables Jane to be aware of the transfer of this attribute value, and to grant her permission for the transfer or decline the transaction based on her preference. Other metadata elements with privacy implications, such as `origin`, are not needed in this transaction, technically or policy-wise. Thus, they should be excluded since they are not necessary and their inclusion would potentially reveal a broad profile of Jane (e.g., related to her associations with certain organizations).
 
 #### Suggested Attribute Value Metadata
 
